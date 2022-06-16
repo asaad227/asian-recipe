@@ -1,0 +1,80 @@
+
+
+.App {
+  text-align: center;
+  background-color: rgba(103, 73, 73, 0.573); 
+}
+
+
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-box{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 400px;
+  padding: 10px;
+  padding-top: 10px;
+  background-color: rgb(0 0 0 / 29%);
+  border-radius: 20px;
+  border: 50px solid rgb(63 6 6 / 60%);
+  align-items: center;
+  margin: 25px;
+}
+
+.form{
+  display: flex;
+  margin-left: 5px;
+  margin-top: 1%;
+
+}
+
+.textIn{
+  display: flex;
+  width: 300px;
+  height: 25px;
+  padding: 10px 5px;
+  border-radius: 5px;
+}
+
+
+
+.cuisinInput,.submit{
+  display: flex;
+  width: 100px;
+  height: 50px;
+  padding: 10px 5px;
+  border-radius: 5px;
+
+
+}
+
+.ingredientPara{
+  text-align: justify;
+  padding: 10px 5px 10px 5px;
+}
+
+.label{
+  font-size: large;
+  font-style: oblique;
+  padding: 5px;
+}
+image{
+  border-radius: 20px;
+}
+.cuisinInput:hover, .textIn:hover, .submit:hover{
+  color: rgba(255, 217, 0, 0.562);
+  font-style: oblique;
+  text-transform: uppercase;
+  background-color:rgb(63 6 6 / 60%);
+  transition: 0.7s; 
+}
+
+.label, .ingredientPara{
+  margin-top: 20%;
+  color: aliceblue;
+}
+
