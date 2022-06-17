@@ -1,5 +1,4 @@
 import React, {useState} from 'react'
-import Pic from './asset/Recipe-site.png'
 import './App.css';
 
 

@@ -2,14 +2,16 @@
 
 .App {
   text-align: center;
-  background-color: rgba(103, 73, 73, 0.774); 
+  background-color: rgba(103, 73, 73, 0.774);
+  height: auto;
 }
 
 
 .flex-container{
   display: flex;
-  justify-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+  
 }
 
 .flex-box{
@@ -30,6 +32,7 @@
 
 .form{
   display: flex;
+  flex-wrap: wrap;
   margin-left: 5px;
   margin-top: 1%;
 
@@ -81,3 +84,11 @@ image{
   color: aliceblue;
 }
 
+
+@media screen and (max-width: 700px) {
+  .cuisinInput, .submit{
+    width: 50px;
+    height: 25px;
+    padding: 5px 2.5px;
+  }
+}
