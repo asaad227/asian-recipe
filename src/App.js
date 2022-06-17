@@ -49,7 +49,7 @@ function App() {
  <div className='flex-container'>
 {data.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
 <div>
-<img src={e.recipe.image} width={200} height={200} paddingTop={20} paddingRight={50} borderRadius={5} alt={e.recipe.label}/>
+<img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
 </div>
 <p className='ingredientPara'>{e.recipe.ingredientLines}</p>
 </section>)}
