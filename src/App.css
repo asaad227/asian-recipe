@@ -43,11 +43,12 @@
   padding: 10px 5px;
   margin: 10px 5px;
   border-radius: 5px;
+  font-size: xx-small;
 }
 
 
 
-.cuisinInput{
+.cuisineInput{
   width: 100px;
   padding: 10px 5px;
   margin: 10px 5px;
@@ -68,7 +69,7 @@
 image{
   border-radius: 20px;
 }
-.cuisinInput:hover, .textIn:hover, .submit:hover{
+.cuisineInput:hover, .textIn:hover, .submit:hover{
   color: rgba(255, 217, 0, 0.562);
   font-style: oblique;
   text-transform: uppercase;
@@ -91,7 +92,7 @@ image{
     padding: 5px 2.5px;
     margin: 5px 2.5px;
   }
-  .cuisinInput{
+  .cuisineInput{
     width: 75px;
     padding: 5px 2.5px;
     margin: 5px 2.5px;
