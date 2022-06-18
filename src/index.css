@@ -16,7 +16,7 @@ code {
     monospace;
 }
 
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 500px) {
   body{
     background-image: url(./asset/Recipe-asian-app.png);
     max-height: 857px;
