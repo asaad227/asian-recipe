@@ -33,7 +33,7 @@ function App() {
   return (
     <div className="App">
      <form onSubmit ={onSubmit} className='form'>
-    <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='REFINE SEARCH BY Calories, Diet, Ingredients'/>
+    <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='Write here then select cuisin type'/>
    <input id='indian' className='cuisinInput' type='button' onClick={onSubmit} value='Indian' on='true'/>
    <input id='chinese' className='cuisinInput' type='button' onClick={onSubmit} value='Chinese' on='true'/>
    <input id='korean' className='cuisinInput' type='button' onClick={onSubmit} value='Korean' on='true'/>

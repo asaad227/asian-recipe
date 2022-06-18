@@ -34,27 +34,25 @@
   display: flex;
   flex-direction: initial;
   flex-wrap: wrap;
-  /* margin-left: 5px; */
   margin-top: 1%;
 
 }
 
 .textIn{
-  /* width: 300px; */
-  height: 25px;
+  width: 250px;
   padding: 10px 5px;
-  border-radius: 20px;
-  margin: 0px 5px;
+  margin: 10px 5px;
+  border-radius: 5px;
 }
 
 
 
-.cuisinInput,.submit{
+.cuisinInput{
   width: 100px;
-  height: 50px;
   padding: 10px 5px;
-  border-radius: 20px;
-  margin: 0px 5px;
+  margin: 10px 5px;
+  border-radius: 5px;
+
 }
 
 .ingredientPara{
@@ -86,14 +84,17 @@ image{
 
 @media screen and (max-width: 700px) {
   .form{
-    justify-content: flex-start;
-  }
-  .cuisinInput, .submit{
-    width: 50px;
-    height: 25px;
-    padding: 5px 2.5px;
-    margin: 0px 5px;
+    justify-content: center;
   }
 
+  .textIn{
+    padding: 5px 2.5px;
+    margin: 5px 2.5px;
+  }
+  .cuisinInput{
+    width: 75px;
+    padding: 5px 2.5px;
+    margin: 5px 2.5px;
+  }
   
 }
