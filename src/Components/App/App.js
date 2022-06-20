@@ -32,14 +32,14 @@ function App() {
   return (
     <div className="App">
      <form onSubmit ={onSubmit} className='form'>
+     {/* <button id='home' className='cuisineInput' type='button' onClick={()=> window.location.reload()} value='Home'>Home</button> */}
     <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='Type main ingredients then select your CUISINE'/>
-    <button id='home' className='cuisineInput' type='button' onClick={()=> window.location.reload()} value='Home'>Home</button>
+   
    <button id='Indian' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Indian</button>
    <button id='Chinese' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Chinese </button>
    <button id='Korean' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}}  >Korean</button>
    <button id='American' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >American</button>
-  
-   <button>Submit</button>
+   <button className='cuisineInput'>Submit</button>
    
 
 
@@ -52,11 +52,10 @@ function App() {
 <div>
 <img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
 </div>
-<button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="fa fa-heart"></button>
+<button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="cuisineInput">Fav</button>
 <p className='ingredientPara'>{e.recipe.ingredientLines}</p>
 </section>)}
 </div>
-
     </div>
   );
 }
