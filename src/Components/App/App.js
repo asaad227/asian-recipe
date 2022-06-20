@@ -5,13 +5,14 @@ import './App.css';
 
 function App() {
   const [dishInput, setDishInput] = useState('');
-  const [cuisineInput, setcuisineInput] = useState('');
+  const [cuisineInput, setCuisineInput] = useState('');
   const [data, setData] = useState([]);
 
  
+ 
   async function testFetch(){
    
-    const responce = await fetch (`https://api.edamam.com/api/recipes/v2?type=public&q=${dishInput}&q=${cuisineInput}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&random=true`);
+    const responce = await fetch (`https://api.edamam.com/api/recipes/v2?type=public&q=${dishInput}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&cuisineType=${cuisineInput}&random=true`);
     const data = await responce.json();
     const {hits} = data
  console.log(hits)
@@ -21,24 +22,24 @@ function App() {
   function onSubmit(e){
     e.preventDefault();
     testFetch()
-    setcuisineInput('')
-    setcuisineInput(e.target.value)
     
   } 
  
  
-  
+ console.log(cuisineInput)
  
  
   return (
     <div className="App">
      <form onSubmit ={onSubmit} className='form'>
     <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='Type main ingredients then select your CUISINE'/>
-    <input id='home' className='cuisineInput' type='button' onClick={()=> window.location.reload()} value='Home' on='true'/>
-   <input id='indian' className='cuisineInput' type='button' onClick={onSubmit} value='Indian' on='true'/>
-   <input id='chinese' className='cuisineInput' type='button' onClick={onSubmit} value='Chinese' on='true'/>
-   <input id='korean' className='cuisineInput' type='button' onClick={onSubmit} value='Korean' on='true'/>
-   <input id='asian' className='cuisineInput' type='button' onClick={onSubmit} value='Asian' on='true'/>
+    <button id='home' className='cuisineInput' type='button' onClick={()=> window.location.reload()} value='Home'>Home</button>
+   <button id='Indian' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Indian</button>
+   <button id='Chinese' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Chinese </button>
+   <button id='Korean' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}}  >Korean</button>
+   <button id='American' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >American</button>
+  
+   <button>Submit</button>
    
 
 
@@ -51,6 +52,7 @@ function App() {
 <div>
 <img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
 </div>
+<button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="fa fa-heart"></button>
 <p className='ingredientPara'>{e.recipe.ingredientLines}</p>
 </section>)}
 </div>
