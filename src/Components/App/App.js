@@ -39,7 +39,7 @@ function App() {
    <button id='Indian' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Indian</button>
    <button id='Chinese' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Chinese </button>
    <button id='Korean' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}}  >Korean</button>
-   <button id='American' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >American</button>
+   <button id='Asian' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Asian</button>
    <button className='cuisineInput'>Get Recipe</button>
    
 
