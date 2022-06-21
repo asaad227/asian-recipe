@@ -40,6 +40,7 @@
 
 .textIn{
   width: 250px;
+  box-shadow: 0px 0px 0px 2px white;
   padding: 10px 5px;
   margin: 10px 5px;
   border-radius: 5px;
@@ -52,7 +53,11 @@
   width: 100px;
   padding: 10px 5px;
   margin: 10px 5px;
+  background-color: initial;
+  border: 2px solid gold;
   border-radius: 5px;
+  box-shadow: 0px 0px 0px 2px white;
+  color: rgba(255, 217, 0, 0.562);
 
 }
 
@@ -70,11 +75,15 @@ image{
   border-radius: 20px;
 }
 .cuisineInput:hover, .textIn:hover, .submit:hover{
-  color: rgba(255, 217, 0, 0.562);
+  color: rgba(255, 255, 255, 0.807);
+  cursor: pointer;
   font-style: oblique;
   text-transform: uppercase;
   background-color:rgb(63 6 6 / 60%);
   transition: 0.7s; 
+}
+.cuisineInput:active{
+  background-color: white;
 }
 
 .label, .ingredientPara{
@@ -82,7 +91,27 @@ image{
   color: aliceblue;
 }
 
+.reBtn{
+  float: right;
+  margin: 5px 5px;
+  background-color: initial;
+  border: 2px solid gold;
+  border-radius: 5px;
+  box-shadow: 0px 0px 0px 2px white;
+  color: red;
+}
 
+.iconNav{
+  color: white;
+}
+.iconNav:hover{
+  color: goldenrod;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.reBtn:active{
+background-color: brown;
+}
 @media screen and (max-width: 700px) {
   .form{
     justify-content: center;

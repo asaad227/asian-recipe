@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 import './App.css';
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 
 
 
@@ -52,7 +53,7 @@ function App() {
 <div>
 <img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
 </div>
-<button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="cuisineInput">Fav</button>
+<button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="reBtn"><MdOutlineFavoriteBorder className='iconNav' /></button>
 <p className='ingredientPara'>{e.recipe.ingredientLines}</p>
 </section>)}
 </div>

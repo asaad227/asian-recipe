@@ -1,5 +1,6 @@
 
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { RiDeleteBin5Line } from "react-icons/ri";
 
 export default function Fav() {
   const [data, setData] = useState([])
@@ -33,7 +34,8 @@ function remove(e){
   </div>
   
   <p className='ingredientPara'>{e.ingredientLines}</p>
-  <button onClick={()=>remove(e)}>Remove</button>
+
+  <button onClick={()=>remove(e)} className='reBtn'><RiDeleteBin5Line className='iconNav' /></button>
   </section>)}
   </div>
   )
