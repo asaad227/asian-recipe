@@ -27,7 +27,8 @@ function remove(e){
 
  console.log(data)
 //data? will take care of, if nothing on fav list it will show empty page
-  return (<div className='flex-container'>
+  return (<div className='App'>
+  <div className='flex-container'>
   {data?.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.label}</h4>
   <div>
   <img src={e.image} width={200} height={200} alt={e.label}/>
@@ -37,6 +38,7 @@ function remove(e){
 
   <button onClick={()=>remove(e)} className='reBtn'><RiDeleteBin5Line className='iconNav' /></button>
   </section>)}
+  </div>
   </div>
   )
   }
