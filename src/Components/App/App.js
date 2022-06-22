@@ -8,6 +8,7 @@ function App() {
   const [dishInput, setDishInput] = useState('');
   const [cuisineInput, setCuisineInput] = useState('');
   const [data, setData] = useState([]);
+  const [toggle, setToggle] = useState(false)
 
  
  
@@ -25,7 +26,10 @@ function App() {
     testFetch()
     
   } 
- 
+  function display(e){
+    document.documentElement.style.setProperty('--para',e)
+    setToggle(!toggle)
+  }
  
  console.log(cuisineInput)
 
@@ -52,11 +56,13 @@ function App() {
 {data.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
 <div>
 <img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
-<h6 style={{color:'white'}}>Meal type: {e.recipe.mealType}</h6>
+<h6 style={{color:'gold'}}>Meal type: {e.recipe.mealType}</h6>
 </div>
 <button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="reBtn"><MdOutlineFavoriteBorder className='iconNav' /></button>
-<p className='ingredientPara'>Ingredients: {e.recipe.ingredientLines}</p>
-<h6 style={{color:'white'}}>Total time: {e.recipe.totalTime} min</h6>
+<div>
+  <button className='displayParaFav' id={String(!toggle)} onClick={()=>display(toggle? 'none': 'flex')}><p className='ingredientPara'><b>Ingredients: </b> {e.ingredientLines}</p>{!toggle? 'Show': 'Hide'} ingredients</button>
+  </div>
+<h6 style={{color:'gold'}}>Total time: {e.recipe.totalTime} min</h6>
 </section>)}
 </div>
     </div>

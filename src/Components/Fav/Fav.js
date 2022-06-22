@@ -4,6 +4,7 @@ import { RiDeleteBin5Line } from "react-icons/ri";
 
 export default function Fav() {
   const [data, setData] = useState([])
+  const [toggle, setToggle] = useState(false)
 
   function newData(){
     if(localStorage.length >= 1){
@@ -26,6 +27,17 @@ function remove(e){
 }
 
 
+
+function display(e){
+  document.documentElement.style.setProperty('--para',e)
+  setToggle(!toggle)
+}
+
+
+
+   
+
+
  console.log(data)
 //data? will take care of, if nothing on fav list it will show empty page
   return (<div className='App'>
@@ -33,11 +45,12 @@ function remove(e){
   {data?.map((e, index)=> <section className='flex-boxFav' key={index}><h4 className='label'>{e.label}</h4>
   <div>
   <img src={e.image} width={200} height={200} alt={e.label}/>
-  <h6 style={{color:'white'}}>Meal type: {e.mealType}</h6>
+  <h6 style={{color:'gold'}}>Meal type: {e.mealType}</h6>
   </div>
-  
-  <p className='ingredientPara'>Ingredient: {e.ingredientLines}</p>
-  <h6 style={{color:'white'}}>Total time: {e.totalTime} min</h6>
+  <div>
+  <button className='displayParaFav' id={String(!toggle)} onClick={()=>display(toggle? 'none': 'flex')}><p className='ingredientPara'><b>Ingredients: </b> {e.ingredientLines}</p>{!toggle? 'Show': 'Hide'} ingredients</button>
+  </div>
+  <h6 style={{color:'gold'}}>Total time: {e.totalTime} min</h6>
 
   <button onClick={()=>remove(e)} className='reBtn'><RiDeleteBin5Line className='iconNav' /></button>
   </section>)}

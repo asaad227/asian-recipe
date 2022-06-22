@@ -1,11 +1,20 @@
-
+:root{
+  --para: none;
+}
 
 .App {
   text-align: center;
   background-color: rgba(103, 73, 73, 0.774);
   height: auto;
 }
-
+.displayParaFav{
+  font-size: small;
+  border: 2p solid red;
+  background-color: inherit;
+  text-align: justify;
+  padding: 10px 5px 10px 5px;
+  color: aliceblue;
+}
 
 .flex-container{
   display: flex;
@@ -76,11 +85,13 @@
 }
 
 .ingredientPara{
+  display: var(--para);
  text-align: justify;
   padding: 10px 5px 10px 5px;
 }
 
 .label{
+  color: gold;
   font-size: large;
   font-style: oblique;
   padding: 5px;
@@ -100,10 +111,10 @@ image{
   background-color: white;
 }
 
-.label, .ingredientPara{
-  /* margin-top: 20%; */
+.ingredientPara{
   color: aliceblue;
 }
+
 .favTxt{
   color: gold;
 padding-top: 50px ;
