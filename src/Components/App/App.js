@@ -28,7 +28,7 @@ function App() {
  
  
  console.log(cuisineInput)
- 
+
  
   return (
     <div className="App">
@@ -52,9 +52,11 @@ function App() {
 {data.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
 <div>
 <img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
+<h6 style={{color:'white'}}>Meal type: {e.recipe.mealType}</h6>
 </div>
 <button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="reBtn"><MdOutlineFavoriteBorder className='iconNav' /></button>
-<p className='ingredientPara'>{e.recipe.ingredientLines}</p>
+<p className='ingredientPara'>Ingredients: {e.recipe.ingredientLines}</p>
+<h6 style={{color:'white'}}>Total time: {e.recipe.totalTime} min</h6>
 </section>)}
 </div>
     </div>

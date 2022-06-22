@@ -29,6 +29,20 @@
   align-items: center;
   margin: 25px;
 }
+.flex-boxFav{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 450px;
+  padding: 0px 10px;
+  background-color: rgb(0 0 0 / 29%);
+  border-radius: 20px;
+  box-shadow: 10px 10px 5px 12px rgb(63 6 6 / 60%);
+  margin-top: 50px;
+  margin-left: 40px;
+}
 
 .form{
   display: flex;
@@ -62,7 +76,7 @@
 }
 
 .ingredientPara{
-  text-align: justify;
+ text-align: justify;
   padding: 10px 5px 10px 5px;
 }
 
@@ -87,7 +101,7 @@ image{
 }
 
 .label, .ingredientPara{
-  margin-top: 20%;
+  /* margin-top: 20%; */
   color: aliceblue;
 }
 .favTxt{

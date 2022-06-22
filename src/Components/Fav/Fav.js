@@ -25,16 +25,19 @@ function remove(e){
       
 }
 
+
  console.log(data)
 //data? will take care of, if nothing on fav list it will show empty page
   return (<div className='App'>
   <div className='flex-container'>
-  {data?<div className='favTxt'><h2 style={{fontStyle:'oblique'}}>Nothing on your favorite list.</h2><p style={{color:'whitesmoke'}}>To add please go back to <b>Home</b> get recipe of your choice and then add to <b>Fav</b> list.</p></div>:data.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.label}</h4>
+  {data?.map((e, index)=> <section className='flex-boxFav' key={index}><h4 className='label'>{e.label}</h4>
   <div>
   <img src={e.image} width={200} height={200} alt={e.label}/>
+  <h6 style={{color:'white'}}>Meal type: {e.mealType}</h6>
   </div>
   
-  <p className='ingredientPara'>{e.ingredientLines}</p>
+  <p className='ingredientPara'>Ingredient: {e.ingredientLines}</p>
+  <h6 style={{color:'white'}}>Total time: {e.totalTime} min</h6>
 
   <button onClick={()=>remove(e)} className='reBtn'><RiDeleteBin5Line className='iconNav' /></button>
   </section>)}
