@@ -90,7 +90,10 @@ image{
   margin-top: 20%;
   color: aliceblue;
 }
-
+.favTxt{
+  color: gold;
+  margin-top: 100px;
+}
 .reBtn{
   float: right;
   margin: 5px 5px;
