@@ -27,9 +27,10 @@ function App() {
     
   } 
   function display(e){
-    document.documentElement.style.setProperty('--para',e)
-    setToggle(!toggle)
-  }
+    e.preventDefault();
+     setToggle(!toggle)
+      
+    }
  
  console.log(cuisineInput)
 
@@ -59,9 +60,12 @@ function App() {
 <h6 style={{color:'gold'}}>Meal type: {e.recipe.mealType}</h6>
 </div>
 <button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="reBtn"><MdOutlineFavoriteBorder className='iconNav' /></button>
-<div>
-  <button className='displayParaFav' id={String(!toggle)} onClick={()=>display(toggle? 'none': 'flex')}><p className='ingredientPara'><b>Ingredients: </b> {e.recipe.ingredientLines}</p>{!toggle? 'Show': 'Hide'} ingredients</button>
-  </div>
+
+<form onSubmit={display}>
+  <p  className='ingredientPara'>{toggle? e.recipe.ingredientLines: ''}</p>
+  <button className='cuisineInput'>{!toggle? 'Get Ingredient': 'Hide Ingredient'}</button>
+  </form>
+ 
 <h6 style={{color:'gold'}}>Total time: {e.recipe.totalTime} min</h6>
 </section>)}
 </div>

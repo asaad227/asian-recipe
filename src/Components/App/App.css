@@ -83,9 +83,14 @@
   color: rgba(255, 217, 0, 0.562);
 
 }
+.ingredientHide{
+  display: var(--para);
+ text-align: justify;
+  padding: 10px 5px 10px 5px;
+}
 
 .ingredientPara{
-  display: var(--para);
+  display: flex;
  text-align: justify;
   padding: 10px 5px 10px 5px;
 }

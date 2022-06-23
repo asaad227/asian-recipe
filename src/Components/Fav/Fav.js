@@ -26,13 +26,21 @@ function remove(e){
       
 }
 
+// function display(e){
+//   const ex = data.find((x)=> x.label === e.label);
+  
+//   console.log('check',ex.image, data)
 
+//   if(ex){
+//    setData(data.map((x)=> x.label === e.label? x.label.ingredientLines: x))
+//   }
+// }
 
-function display(e){
-  document.documentElement.style.setProperty('--para',e)
-  setToggle(!toggle)
-}
-
+function onSubmit(e){
+e.preventDefault();
+ setToggle(!toggle)
+  
+} 
 
 
    
@@ -47,9 +55,11 @@ function display(e){
   <img src={e.image} width={200} height={200} alt={e.label}/>
   <h6 style={{color:'gold'}}>Meal type: {e.mealType}</h6>
   </div>
-  <div>
-  <button className='displayParaFav' id={String(!toggle)} onClick={()=>display(toggle? 'none': 'flex')}><p className='ingredientPara'><b>Ingredients: </b> {e.ingredientLines}</p>{!toggle? 'Show': 'Hide'} ingredients</button>
-  </div>
+  <form onSubmit={onSubmit}>
+  <p  className='ingredientPara'>{toggle? e.ingredientLines: ''}</p>
+  <button className='cuisineInput'>{!toggle? 'Get Ingredient': 'Hide Ingredient'}</button>
+  </form>
+
   <h6 style={{color:'gold'}}>Total time: {e.totalTime} min</h6>
 
   <button onClick={()=>remove(e)} className='reBtn'><RiDeleteBin5Line className='iconNav' /></button>
