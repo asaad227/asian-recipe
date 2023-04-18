@@ -111,7 +111,7 @@
   transition: 0.7s; 
 }
 
-@media (max-width: 1250px) {
+@media (max-width: 768px) {
  .mainSection{
   width: 80vw;
   margin: 5px;
