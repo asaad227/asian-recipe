@@ -59,12 +59,14 @@ const showIngredient = (id)=>{
       <p>Please fetch the data</p>
     </div>)
   }else{
-   return (local.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
+   return (local.map((e, index)=> <section  key={index}><h4 className='label'>{e.recipe.label}</h4>
+    <button className='favBtn' type='submit' key={e.id} onClick={()=>addFav(index)}><i className='fa fa-heart' aria-hidden='true'></i></button>
     <div>
-    <img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
-    </div>
+    <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
     
-  <button onClick={()=> showIngredient(index)}>{show[index]? "Hide":"Show"}</button>
+    </div>
+   
+  <button className='ingredientBtn' onClick={()=> showIngredient(index)}>{show[index]? "Hide Ingredient":"Show Ingredient"}</button>
    <p className="ingredientPara" >{show[index]? e.recipe.ingredients.map((x,i)=>{
 return(<div>
   <ul key={i}><li>{x.text}</li></ul>
@@ -72,7 +74,7 @@ return(<div>
    })
 :""}</p>
     
-    <button type='submit' key={e.id} onClick={()=>addFav(index)}>Add</button>
+   
     </section>))
   }
  }
@@ -81,15 +83,19 @@ return(<div>
   return (
     <div className="App">
      <form onSubmit ={onSubmit} className='form'>
+     <div>
     <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='REFINE SEARCH BY Calories, Diet, Ingredients'/>
+    </div>
+    <div>
    <input id='indian' className='cuisinInput' type='button' onClick={onSubmit} value='Indian' on='true'/>
    <input id='chinese' className='cuisinInput' type='button' onClick={onSubmit} value='Chinese' on='true'/>
    <input id='korean' className='cuisinInput' type='button' onClick={onSubmit} value='Korean' on='true'/>
    <input id='asian' className='cuisinInput' type='button' onClick={onSubmit} value='Asian' on='true'/>
    <input id='asian' className='cuisinInput' type='button' onClick={()=> window.location.reload()} value='Home' on='true'/>
+   </div>
      </form>
      
- <div className='flex-container'>
+ <div >
  
 {checklist()}
 </div>
