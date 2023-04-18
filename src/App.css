@@ -8,7 +8,7 @@
   align-items: center;
 }
 
-.App section{
+.mainSection{
   width: 40vw;
   margin: 10px;
   border: 1px solid #b8bfc2;
@@ -111,5 +111,11 @@
   transition: 0.7s; 
 }
 
+@media (max-width: 1250px) {
+ .mainSection{
+  width: 80vw;
+  margin: 5px;
+ }
+}
 
 

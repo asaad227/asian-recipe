@@ -59,7 +59,7 @@ const showIngredient = (id)=>{
       <p>Please fetch the data</p>
     </div>)
   }else{
-   return (local.map((e, index)=> <section  key={index}><h4 className='label'>{e.recipe.label}</h4>
+   return (local.map((e, index)=> <section className='mainSection'  key={index}><h4 className='label'>{e.recipe.label}</h4>
     <button className='favBtn' type='submit' key={e.id} onClick={()=>addFav(index)}><i className='fa fa-heart' aria-hidden='true'></i></button>
     <div>
     <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
