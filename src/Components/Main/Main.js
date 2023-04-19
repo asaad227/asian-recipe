@@ -9,7 +9,6 @@ import Profile from '../Profile';
 export default function Main() {
   return (
     <div>
-    <Nav/>
       <Routes>
       <Route path="/" element={<Profile />}/>
       <Route path="recipe" element={<App />}/>

@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import FavPicHome from "../../assets/Recipe-site.png"
 import "./index.css";
+import Nav from "../Nav/Nav";
 
 
 
@@ -83,12 +84,16 @@ return(<div>
   //data? will take care of, if nothing on fav list it will show empty page
   //isAuthenticated will checked user allow to use this page 
   return (
+    <div>
+    <Nav/>
 <div className="recipe-app">
+
       <div className='flex-container'>
       {checklist()}
 
       </div>
       
+    </div>
     </div>
   )
 }

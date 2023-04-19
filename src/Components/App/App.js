@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import './App.css';
 import RecipeButtons from '../Buttons';
+import Nav from '../Nav/Nav';
 
 
 
@@ -85,7 +86,11 @@ function App() {
    }
 
   return (
+    <div>
+       <Nav/>
+  
     <div className="recipe-app">
+   
       <form onSubmit={onSubmit} className='form'>
         <div>
           <input className='textIn' onChange={(e) => { setDishInput(e.target.value) }} type='text' value={dishInput} placeholder='Enter your recipe search here....' />
@@ -99,6 +104,7 @@ function App() {
       <div className='flex-container'>
       {checklist()}
       </div>
+    </div>
     </div>
   );
 }

@@ -8,6 +8,12 @@
     --yellow: #ffd159;
     --light-green: #a3f596;
   }
+  .nav-home {
+    display: flex;
+  }
+  .profileIcon{
+    font-size: xx-large;
+  }
 
 .profileName {
   text-align: center;
@@ -15,9 +21,8 @@
   padding: 0px;
 }
 .profilePic {
-  border-radius: 30%;
-  height: 10em;
-  width: 10em;
+  border-radius: 10%;
+  width: 15vw;
   image-rendering: crisp-edges;
 }
 .profile {
@@ -26,4 +31,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+
+@media screen and (max-width: 768px) {
+  .profilePic{
+    width: 40vw;
+  }
 }
