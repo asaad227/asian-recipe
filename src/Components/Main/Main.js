@@ -4,13 +4,15 @@ import Fav from '../Fav/Fav';
 import App from '../App/App';
 import { Route } from 'react-router-dom';
 import Nav from '../Nav/Nav';
+import Profile from '../Profile';
 
 export default function Main() {
   return (
     <div>
     <Nav/>
       <Routes>
-      <Route path="/" element={<App />}/>
+      <Route path="/" element={<Profile />}/>
+      <Route path="recipe" element={<App />}/>
       <Route path="fav" element={<Fav />} />
     </Routes>
     </div>

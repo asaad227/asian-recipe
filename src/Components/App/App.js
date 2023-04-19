@@ -1,74 +1,104 @@
-import React, {useState} from 'react'
+import React, { useState, useEffect } from 'react'
 import './App.css';
-import { MdOutlineFavoriteBorder } from "react-icons/md";
+import RecipeButtons from '../Buttons';
+
 
 
 
 function App() {
   const [dishInput, setDishInput] = useState('');
   const [cuisineInput, setCuisineInput] = useState('');
-  const [data, setData] = useState([]);
-  const [toggle, setToggle] = useState(false)
+  const [show, setShow] = useState(false)
 
- 
- 
-  async function testFetch(){
-   
-    const responce = await fetch (`https://api.edamam.com/api/recipes/v2?type=public&q=${dishInput}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&cuisineType=${cuisineInput}&random=true`);
+  const [data, setData] = useState(() => {
+    const storedList = localStorage.getItem("myRecipe");
+    return storedList ? JSON.parse(storedList) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("myRecipe", JSON.stringify(data))
+  }, [data])
+
+  async function getApi() {
+
+    const responce = await fetch(`https://api.edamam.com/api/recipes/v2?type=public&q=${dishInput}&app_id=${process.env.REACT_APP_API_ID}&app_key=${process.env.REACT_APP_API_KEY}&cuisineType=${cuisineInput}&random=true`);
     const data = await responce.json();
-    const {hits} = data
- console.log(hits)
-    setData(hits);
-      }
-    //  testFetch()
-  function onSubmit(e){
-    e.preventDefault();
-    testFetch()
-    
-  } 
-  function display(e){
-    e.preventDefault();
-     setToggle(!toggle)
-      
+    if (data.status === 404) {
+      console.log("error");
+    } else {
+      // adding id to the api and adding 1+ index number
+      const { hits } = data;
+      const exist = await hits.map((e, i) => e ? { ...e, id: Number(1) + i } : e);
+      //setting local storage with this new api
+      localStorage.setItem("myRecipe", JSON.stringify(exist))
+
+      console.log(exist)
+      setData(exist)
     }
- 
- console.log(cuisineInput)
 
- 
-  return (
-    <div className="App">
-     <form onSubmit ={onSubmit} className='form'>
-     {/* <button id='home' className='cuisineInput' type='button' onClick={()=> window.location.reload()} value='Home'>Home</button> */}
-    <input className='textIn'  onChange={(e)=> {setDishInput(e.target.value)}} type='text' value={dishInput} placeholder='Type main ingredients then select your CUISINE'/>
-   
-   <button id='Indian' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Indian</button>
-   <button id='Chinese' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Chinese </button>
-   <button id='Korean' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}}  >Korean</button>
-   <button id='Asian' className='cuisineInput' type='button' onClick={(e)=> {setCuisineInput(e.target.id)}} >Asian</button>
-   <button className='cuisineInput'>Get Recipe</button>
-   
+  }
 
+  function onSubmit(e) {
+    e.preventDefault();
+    getApi();
+  }
+  const display = (id) => {
+    setShow((prevState) => ({
+      ...prevState,
+      [id]: !prevState[id],
+    }));
+  };
 
-       {/* <input onChange={(e)=> {setcuisineInput(e.target.value)}} type='text' placeholder='Meat or Chicken'/> */}
-       {/* <button className='submit'>Submit</button> */}
-     </form>
+  function fav(index) {
+    const list = [...data];
+    list[index].id = !list[index].id
+    const finalList = list.filter(e => !e.id)
+    localStorage.setItem("myFav", JSON.stringify(finalList))
+    console.log(finalList);
+  }
+
+  function checklist(){
+    if(data.length === 0){
+      return(<div>
+        <p>Please fetch the data</p>
+      </div>)
+    }else{
+     return (data.map((e, index)=> <section className='flex-box' key={index}>
      
- <div className='flex-container'>
-{data.map((e, index)=> <section className='flex-box' key={index}><h4 className='label'>{e.recipe.label}</h4>
-<div>
-<img src={e.recipe.image} width={200} height={200} alt={e.recipe.label}/>
-<h6 style={{color:'gold'}}>Meal type: {e.recipe.mealType}</h6>
-</div>
-<button onClick={()=> localStorage.setItem(e.recipe.label, JSON.stringify(e.recipe))} className="reBtn"><MdOutlineFavoriteBorder className='iconNav' /></button>
+       <h4 className='label'>{e.recipe.label}</h4>
+       <button key={index} onClick={() => fav(index)} className="reBtn"> <i class="fa fa-heart iconNav" aria-hidden="true"></i></button>
+       
+       <div>
+      <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
+      </div>
+    <button className='ingredientBtn' onClick={()=> display(index)}>{show[index]? "Hide Ingredients":"Show Ingredients"}</button>
+     <p >{show[index]? e.recipe.ingredients.map((x,i)=>{
+  return(<div>
+    <ul  className="ingredientPara" key={i}><li>{x.text}</li></ul>
+    </div>)
+     })
+  :""}</p>
+      
+     
+      </section>))
+    }
+   }
 
-<form onSubmit={display}>
-  <p  className='ingredientPara'>{toggle? e.recipe.ingredientLines: ''}</p>
-  <button className='cuisineInput'>{!toggle? 'Get Ingredient': 'Hide Ingredient'}</button>
-  </form>
- 
-<h6 style={{color:'gold'}}>Total time: {e.recipe.totalTime} min</h6>
-</section>)}
-</div>
+  return (
+    <div className="recipe-app">
+      <form onSubmit={onSubmit} className='form'>
+        <div>
+          <input className='textIn' onChange={(e) => { setDishInput(e.target.value) }} type='text' value={dishInput} placeholder='Enter your recipe search here....' />
+        </div>
+        <div>
+          <RecipeButtons onClick={(e) => setCuisineInput(e.target.id)} />
+
+        </div>
+      </form>
+
+      <div className='flex-container'>
+      {checklist()}
+      </div>
     </div>
   );
 }
