@@ -27,9 +27,11 @@
 padding: 5px;
 }
 .profilePic {
-  border-radius: 10%;
-  width: 15vw;
+  width: 30vw;
+  border-radius: 1rem;
   image-rendering: crisp-edges;
+  border: 1px solid #b8bfc2;
+  box-shadow: 1px 0px 6px white;
 }
 
 .homeIcon{
@@ -49,7 +51,6 @@ padding: 5px;
 }
 a{
   text-decoration: none;
-  color: #fff;
 }
 .mainIcon{
   font-size: 0.5em;
@@ -57,7 +58,12 @@ a{
   border: 1px solid #b8bfc2;
   box-shadow: 1px 0px 6px white;
   background-color: #ffffff57;
-  margin-left: 0.5em;
+  margin: 0.5rem;
+}
+
+.mainIcon:hover{
+  background-color: #ffffff;
+  color: #84c4d4;
 }
 .txtIcon{
   font-family: "Roboto","Helvetica","Arial",sans-serif;
@@ -66,13 +72,16 @@ a{
   line-height: 1.75;
   letter-spacing: 0.02857em;
   text-transform: uppercase;
-    color: #fff;
-}
+  
 
+}
+.txtIcon:hover{
+  color:#ffffff57;
+}
 
 @media screen and (max-width: 768px) {
   .profilePic{
-    width: 40vw;
+    width: 85vw;
   }
 }
 
