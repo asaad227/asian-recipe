@@ -44,7 +44,7 @@ export default function Fav() {
   if(data.length === 0){
     return(<div className="favDiv">
       <h4>Nothing on the <i className="fa fa-heart" aria-hidden="true"></i> list. Add some from the Home!!!</h4>
-    <img src={FavPicHome} className="recipe-pic" alt="Recipe-home"/>
+    <img src={FavPicHome} className="recipe-fav" alt="Recipe-home"/>
     </div>)
   }else{
    return (

@@ -10,7 +10,7 @@ const Profile = () => {
   return (
      (
       <div className="profile">
-       {/* <h1 className="profileName">Welcome To My Recipe Book</h1> */}
+       <h1 className="profileName">Welcome To My Recipe Book</h1>
         {/* <img className="profilePic" src={HomePic} alt="Recipe Home" /> */}
         <div className="homeIcon">
         <button className="mainIcon"><Link to="/fav">

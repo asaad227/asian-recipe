@@ -17,9 +17,14 @@
   }
 
 .profileName {
-  text-align: center;
-  margin-top: 1em;
-  padding: 0px;
+  font-family: "Roboto","Helvetica","Arial",sans-serif;
+  font-weight: 800;
+  font-size: 1.5rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+ 
+padding: 5px;
 }
 .profilePic {
   border-radius: 10%;
@@ -36,14 +41,10 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  align-items: center;
   width: 100vw;
   height: 100vh;
-  background-image: url(../../assets/Recipe-asian-app.gif);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: relative;
-  background-color: #000;
+  background-color: #84c4d4;;
   color: #fff
 }
 a{
