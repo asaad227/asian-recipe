@@ -5,6 +5,14 @@
 .hide{
     display: none;
 }
+
+.recipe-pic{
+    width: 80vw;
+    height: 75vh;
+    border-radius: 1rem;
+    border: 1px solid #b8bfc2;
+    box-shadow: 1px 0px 6px #fefae0;
+  } 
 .remove-Allfav{
     align-items: center;
       -webkit-box-pack: center;
@@ -41,3 +49,16 @@
   .fa-heart{
     color: #d24a19;
   }
+
+  .favDiv{
+    width: 90vw;
+    height: 90vh;
+    padding-left:18px ;
+
+  }
+
+  @media screen and (min-width: 768px) {
+    
+  }
+    
+  

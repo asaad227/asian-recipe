@@ -1,6 +1,6 @@
 import React from "react";
 import "./Profile.css"
-import HomePic from "../../assets/Recipe-asian-app.gif"
+// import HomePic from "../../assets/Recipe-asian-app.gif"
 import { MdOutlineFavoriteBorder, MdOutlineFoodBank  } from "react-icons/md";
 import { Link } from "react-router-dom";
 const Profile = () => {

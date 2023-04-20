@@ -1,20 +1,18 @@
 
 
-.recipe-app {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  
-}
+
 
 
 .flex-container{
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-  
+  align-items: center;
+  border: 1px solid white;
+  box-shadow: 1px 0px 6px #b8bfc2;
+  width: 90vw;
+  height: auto;
+  margin-left: 18px;
+
 }
 
 
@@ -22,16 +20,11 @@
 
 .ingredientPara{
 display: flex;
- text-align: start;
  font-family: "Roboto","Helvetica","Arial",sans-serif;
  font-weight: 500;
  font-size: 0.875rem;
- line-height: 1.75;
  letter-spacing: 0.02857em;
- padding: 5px;
- border: 1px solid #b8bfc2;
- box-shadow: 1px 0px 6px #fefae0;
- /* text-transform: uppercase; */ 
+ text-transform: uppercase; 
 }
 
 .label{
@@ -44,13 +37,7 @@ display: flex;
    
   padding: 5px;
 }
-.recipe-pic{
-  width: 25vw;
-  height: auto;
-  border-radius: 1rem;
-  border: 1px solid #b8bfc2;
-  box-shadow: 1px 0px 6px #fefae0;
-}
+
 .cuisineInput, .ingredientBtn{
   align-items: center;
     -webkit-box-pack: center;
@@ -151,8 +138,3 @@ justify-content: center;
 background-color: rgb(42, 165, 56);
 }
 
-@media screen and (max-width: 768px) {
-  .recipe-pic{
-    width: 60vw;
-  }
-}

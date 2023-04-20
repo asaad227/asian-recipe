@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from "react";
-import FavPicHome from "../../assets/Recipe-site.png"
+import FavPicHome from "../../assets/Recipe-asian-app.gif";
 import "./index.css";
 import Nav from "../Nav/Nav";
 
@@ -42,7 +42,7 @@ export default function Fav() {
 
  function checklist(){
   if(data.length === 0){
-    return(<div>
+    return(<div className="favDiv">
       <h4>Nothing on the <i className="fa fa-heart" aria-hidden="true"></i> list. Add some from the Home!!!</h4>
     <img src={FavPicHome} className="recipe-pic" alt="Recipe-home"/>
     </div>)
