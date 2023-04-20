@@ -1,0 +1,17 @@
+.navLink{
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+   
+    padding: 0 1rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}:hover{
+        color: #f26a2e;
+    }
+a{
+    margin-left: 10px;
+text-decoration: none;
+    color: #fff;
+}
