@@ -10,15 +10,19 @@ const Profile = () => {
   return (
      (
       <div className="profile">
-       <h1 className="profileName">Welcome To My Recipe Book</h1>
-        <img className="profilePic" src={HomePic} alt="Recipe Home" />
-        <div className="nav-home">
-        <button className='reBtn'><Link to="/fav">
+       {/* <h1 className="profileName">Welcome To My Recipe Book</h1> */}
+        {/* <img className="profilePic" src={HomePic} alt="Recipe Home" /> */}
+        <div className="homeIcon">
+        <button className="mainIcon"><Link to="/fav">
           <MdOutlineFavoriteBorder className='profileIcon' />
-          </Link></button>
-          <button className='reBtn'><Link to="/recipe">
+         
+          <p className="txtIcon">Fav Recipes</p> </Link>
+          </button> 
+          <button className="mainIcon" ><Link to="/recipe">
           <MdOutlineFoodBank className='profileIcon' />
-          </Link></button>
+          
+          <p className="txtIcon">Recipes</p></Link>
+          </button>
         </div>
        
       </div>

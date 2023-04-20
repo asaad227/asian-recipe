@@ -3,7 +3,7 @@ import { Routes } from 'react-router-dom'
 import Fav from '../Fav/Fav';
 import App from '../App/App';
 import { Route } from 'react-router-dom';
-import Nav from '../Nav/Nav';
+import "./index.css"
 import Profile from '../Profile';
 
 export default function Main() {

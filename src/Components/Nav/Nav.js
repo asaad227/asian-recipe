@@ -1,17 +1,18 @@
 import React from 'react';
+import "./index.css";
 import {Link} from 'react-router-dom';
 import { RiHomeSmileLine } from "react-icons/ri";
 import { MdOutlineFavoriteBorder, MdOutlineFoodBank  } from "react-icons/md";
 export default function Nav() {
   return (
     <div>
-        <button className='reBtn'><Link className='navList' to="/">
+        <button className='navBtn'><Link className='navList' to="/">
         <RiHomeSmileLine  className='iconNav'/>
           </Link></button>
-          <button className='reBtn'><Link to="/fav">
+          <button className='navBtn'><Link to="/fav">
           <MdOutlineFavoriteBorder className='iconNav' />
           </Link></button>
-          <button className='reBtn'><Link to="/recipe">
+          <button className='navBtn'><Link to="/recipe">
           <MdOutlineFoodBank className='iconNav' />
           </Link></button>
     </div>

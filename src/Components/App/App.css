@@ -120,7 +120,13 @@ display: flex;
   background-color: white;
 }
 
-
+.fa-heart{
+  color: red;
+  font-size: 1rem;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.7s;
+}
 
 .favTxt{
 color: gold;
@@ -140,11 +146,7 @@ justify-content: center;
 
 
 
-.iconNav:hover{
-  color: goldenrod;
-  transition: 0.5s;
-  cursor: pointer;
-}
+
 .reBtn:active{
 background-color: rgb(42, 165, 56);
 }
