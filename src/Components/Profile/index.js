@@ -18,6 +18,11 @@ const Profile = () => {
          
           <p className="txtIcon">Fav Recipes</p> </Link>
           </button> 
+          <button className="mainIcon"><Link to="/calories">
+          <MdOutlineFavoriteBorder className='profileIcon' />
+         
+          <p className="txtIcon">Calories Counter</p> </Link>
+          </button> 
           <button className="mainIcon" ><Link to="/recipe">
           <MdOutlineFoodBank className='profileIcon' />
           

@@ -5,6 +5,7 @@ import App from '../App/App';
 import { Route } from 'react-router-dom';
 import "./index.css"
 import Profile from '../Profile';
+import CaloreCounter from '../Calories';
 
 export default function Main() {
   return (
@@ -13,6 +14,8 @@ export default function Main() {
       <Route path="/" element={<Profile />}/>
       <Route path="recipe" element={<App />}/>
       <Route path="fav" element={<Fav />} />
+      <Route path="*" element={<h1>404 Not Found</h1>} />
+      <Route path='calories' element={<CaloreCounter />} />
     </Routes>
     </div>
   )

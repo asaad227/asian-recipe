@@ -15,6 +15,9 @@ export default function Nav() {
           <button className='navBtn'><Link to="/recipe">
           <MdOutlineFoodBank className='iconNav' />
           </Link></button>
+          <button className='navBtn'><Link to="/calories">
+          <MdOutlineFoodBank className='iconNav' />
+          </Link></button>
     </div>
   )
 }
