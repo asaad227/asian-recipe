@@ -16,7 +16,7 @@ export default function Nav() {
           <MdOutlineFoodBank className='iconNav' />
           </Link></button>
           <button className='navBtn'><Link to="/calories">
-          Calories Counter
+          Calorie Counter
           </Link></button>
     </div>
   )

@@ -1,7 +1,6 @@
 import React from "react";
 import "./Profile.css"
 import HomePic from "../../assets/Recipe-site.png"
-import { MdOutlineFavoriteBorder, MdOutlineFoodBank  } from "react-icons/md";
 import { Link } from "react-router-dom";
 const Profile = () => {
 
@@ -13,21 +12,19 @@ const Profile = () => {
        <h1 className="profileName">Welcome To My Recipe Book</h1>
         <img className="profilePic" src={HomePic} alt="Recipe Home" />
         <div className="homeIcon">
-        <button className="mainIcon"><Link to="/fav">
-          <MdOutlineFavoriteBorder className='profileIcon' />
-         
-          <p className="txtIcon">Fav Recipes</p> </Link>
-          </button> 
-          <button className="mainIcon"><Link to="/calories">
-         <i className="fa fa-cutlery" aria-hidden="true"></i>
-         
-          <p className="txtIcon">Calories Counter</p> </Link>
-          </button> 
-          <button className="mainIcon" ><Link to="/recipe">
-          <MdOutlineFoodBank className='profileIcon' />
+        <p className="mainIcon"><Link to="/fav">
+          <i className="fa fa-heart" aria-hidden="true"></i>
+          Favourite Recipe</Link>
+          </p> 
+          <p className="mainIcon"><Link to="/calories">
+        
+          Calories Counter</Link>
+          </p> 
+          <p className="mainIcon" > <Link to="/recipe">
+          <i className="fa fa-cutlery" aria-hidden="true"></i>
           
-          <p className="txtIcon">Recipes</p></Link>
-          </button>
+          Recipe</Link> 
+          </p>
         </div>
        
       </div>

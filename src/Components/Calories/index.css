@@ -25,7 +25,7 @@
 
 
 .caloriesCounter input{
-    width: 40vw;
+    width: 37.5vw;
     margin: 0.5rem auto;
     padding: 0.5rem;
     border: 1px solid #181515;
@@ -41,7 +41,7 @@
 }
 
 .searchBtn{
-    width: 40vw;
+    width: 10vw;
     margin: 0.5rem auto;
     padding: 0.5rem;
     border: 1px solid #181515;
@@ -58,7 +58,7 @@
 }
 
 table{
-    border: 1px solid #181515;
+    border: none;
     border-collapse: collapse;
     width: 100%;
     margin: 10px auto;
@@ -68,7 +68,7 @@ table{
 }
 
 td{
-    border: 1px solid #181515;
+    border: none;
     padding: 0.5rem;
     line-height: 1.75;
     letter-spacing: 0.02857em;
@@ -77,7 +77,8 @@ td{
 }
 
 th{
-    border: 1px solid #181515;
+    border: none;
+
     padding: 0.5rem;
     line-height: 1.75;
     letter-spacing: 0.02857em;
@@ -86,12 +87,12 @@ th{
 }
 
 .removeBtn{
-    background-color: #f2e8e8;
+    background-color:none;
     color: #0c0c0c;
-    border: 1px solid #181515;
+    border: none;
     border-radius: 5px;
     font-size: 1rem;
-    font-weight: 400;
+    font-weight: 800;
     text-align: center;
     padding: 0.5rem;
     margin: 0.5rem;
@@ -103,10 +104,10 @@ th{
         width: 85vw;
     }
     .caloriesCounter input{
-        width: 80vw;
+        width: 75vw;
     }
     .searchBtn{
-        width: 80vw;
+        width: 20vw;
     }
     table{
         width: 80vw;

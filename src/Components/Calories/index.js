@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import "./index.css"
 import foods from "../../lib/data"
+import Nav from '../Nav/Nav';
 export default function CaloreCounter() {
     const [nameIn, setNameIn] = useState("");
     const [calories, ] = useState([...foods]);
@@ -51,6 +52,9 @@ export default function CaloreCounter() {
         }
 
   return (
+    <div>
+
+   <Nav/>
     <div className='caloriesCounter'>
         <h1>Calorie Counter</h1>
         <h3>Search for food Calories</h3>
@@ -82,6 +86,7 @@ export default function CaloreCounter() {
         </div>
         <h4>Total Calories:  {total} kcals</h4>
        
+            </div>
             </div>
   )
 }
