@@ -30,7 +30,7 @@
     text-transform: uppercase;
     cursor: pointer;
 }
-.iconNav:hover{
+.iconNav:hover, .navBtn a:hover{
     color: goldenrod;
     transition: 0.5s;
 
