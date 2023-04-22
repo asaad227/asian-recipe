@@ -10,7 +10,7 @@ export default function Nav() {
         <RiHomeSmileLine  className='iconNav'/>
           </Link></button>
           <button className='navBtn'><Link to="/fav">
-          <MdOutlineFavoriteBorder className='iconNav' />
+          <i className="fa fa-heart" aria-hidden="true"></i>
           </Link></button>
           <button className='navBtn'><Link to="/recipe">
           <MdOutlineFoodBank className='iconNav' />

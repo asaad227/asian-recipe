@@ -10,7 +10,9 @@ const Profile = () => {
      (
       <div className="profile">
        <h1 className="profileName">Welcome To My Recipe Book</h1>
+       <Link to="/recipe">
         <img className="profilePic" src={HomePic} alt="Recipe Home" />
+        </Link>
         <div className="homeIcon">
         <button className="mainIcon"><Link to="/fav">
           <i className="fa fa-heart" aria-hidden="true"></i>

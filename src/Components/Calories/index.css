@@ -1,12 +1,13 @@
 .caloriesCounter{
     display: flex;
     width: 45vw;
+    height: 80vh;
     flex-direction: column;
     justify-content: center;
     margin: 10px auto;
     text-align: center;
     color: #0c0c0c;
-    border-radius: 1rem;
+
     border: 1px solid #b8bfc2;
   box-shadow: 1px 0px 6px white;
    
@@ -29,8 +30,6 @@
     cursor: pointer;
     margin: 0.5rem auto;
     padding: 0.5rem;
-    border: 1px solid #181515;
-    border-radius: 5px;
     font-size: 1rem;
     font-weight: 800;
     text-align: center;
@@ -38,6 +37,9 @@
     letter-spacing: 0.02857em;
     text-transform: uppercase;
     font-family: "Roboto","Helvetica","Arial",sans-serif;
+    border: 1px solid #b8bfc2;
+    border-radius: 1rem;
+    box-shadow: 1px 0px 6px white;
     
 }
 

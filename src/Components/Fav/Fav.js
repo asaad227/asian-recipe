@@ -43,13 +43,13 @@ export default function Fav() {
  function checklist(){
   if(data.length === 0){
     return(<div className="favDiv">
-      <h4>Nothing on the <i className="fa fa-heart" aria-hidden="true"></i> list. Add some from the Home!!!</h4>
+      <h5>Nothing on the <i className="fa fa-heart" aria-hidden="true"></i> list. Add some from the Home!!!</h5>
     <img src={FavPicHome} className="recipe-fav" alt="Recipe-home"/>
     </div>)
   }else{
    return (
-    <div>
-     <h4>Here your <i className="fa fa-heart" aria-hidden="true"></i> list below: </h4>
+    <div className="favDiv">
+     <h5>Here your <i className="fa fa-heart" aria-hidden="true"></i> list below: </h5>
     {data.map((e, index)=> <section className='flex-box' key={index}>
    
      <h4 className='label'>{e.recipe.label}</h4>
@@ -57,6 +57,7 @@ export default function Fav() {
      
      <div>
     <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
+    <p className='caloriesApi'>Calories: {e.recipe.calories.toFixed(0)} kcals</p>
     </div>
   <button className='ingredientBtn' onClick={()=> display(index)}>{show[index]? "Hide Ingredients":"Show Ingredients"}</button>
    <p >{show[index]? e.recipe.ingredients.map((x,i)=>{

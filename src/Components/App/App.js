@@ -71,6 +71,7 @@ function App() {
        
        <div>
       <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
+      <p className='caloriesApi'>Calories: {e.recipe.calories.toFixed(0)} kcals</p>
       </div>
     <button className='ingredientBtn' onClick={()=> display(index)}>{show[index]? "Hide Ingredients":"Show Ingredients"}</button>
      <p >{show[index]? e.recipe.ingredients.map((x,i)=>{
