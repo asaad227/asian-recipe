@@ -48,7 +48,7 @@ export default function Fav() {
     </div>)
   }else{
    return (
-    <div className="favDiv">
+    <div>
      <h5>Here your <i className="fa fa-heart" aria-hidden="true"></i> list below: </h5>
     {data.map((e, index)=> <section className='flex-box' key={index}>
    
