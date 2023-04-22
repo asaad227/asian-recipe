@@ -53,9 +53,11 @@ export default function CaloreCounter() {
 
   return (
     <div>
+      <Nav/>
+    <div className='recipe-app'>
 
-   <Nav/>
-    <div className='caloriesCounter'>
+ 
+    <div className='flex-container'>
         <h1>Calorie Calculator</h1>
         <h3>Search for food Calories</h3>
         <p>Enter your ingredient name and hit search to find calories of that ingredient in 100g</p>
@@ -86,6 +88,7 @@ export default function CaloreCounter() {
         </div>
         <h4>Total Calories:  {total} kcals</h4>
        
+            </div>
             </div>
             </div>
   )

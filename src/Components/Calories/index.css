@@ -13,7 +13,7 @@
    
 }
 
-.caloriesCounter h4{
+.flex-container h4{
     text-align: center;
     font-size: 1rem;
     font-weight: 800;
@@ -25,7 +25,7 @@
 
 
 
-.caloriesCounter input{
+.flex-container input{
     width: 37.5vw;
     cursor: pointer;
     margin: 0.5rem auto;
@@ -123,8 +123,8 @@ th{
     .caloriesCounter{
         width: 85vw;
     }
-    .caloriesCounter input{
-        width: 75vw;
+    .flex-container input{
+        width: 78vw;
     }
     .searchBtn{
         width: 20vw;
