@@ -2,7 +2,7 @@ import React from 'react';
 import "./index.css";
 import {Link} from 'react-router-dom';
 import { RiHomeSmileLine } from "react-icons/ri";
-import { MdOutlineFavoriteBorder, MdOutlineFoodBank  } from "react-icons/md";
+import {  MdOutlineFoodBank  } from "react-icons/md";
 export default function Nav() {
   return (
     <div>
