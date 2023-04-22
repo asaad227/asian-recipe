@@ -57,7 +57,7 @@ export default function CaloreCounter() {
     <div className='recipe-app'>
 
  
-    <div className='flex-container'>
+    <div className='calories-container'>
         <h1>Calorie Calculator</h1>
         <h3>Search for food Calories</h3>
         <p>Enter your ingredient name and hit search to find calories of that ingredient in 100g</p>
