@@ -16,7 +16,7 @@ export default function Nav() {
           <MdOutlineFoodBank className='iconNav' />
           </Link></button>
           <button className='navBtn'><Link to="/calories">
-          Calorie Counter
+          <i className="fa fa-calculator" aria-hidden="true"></i>
           </Link></button>
     </div>
   )

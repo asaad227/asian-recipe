@@ -12,19 +12,19 @@ const Profile = () => {
        <h1 className="profileName">Welcome To My Recipe Book</h1>
         <img className="profilePic" src={HomePic} alt="Recipe Home" />
         <div className="homeIcon">
-        <p className="mainIcon"><Link to="/fav">
+        <button className="mainIcon"><Link to="/fav">
           <i className="fa fa-heart" aria-hidden="true"></i>
           Favourite Recipe</Link>
-          </p> 
-          <p className="mainIcon"><Link to="/calories">
+          </button> 
+          <button className="mainIcon"><Link to="/calories">
         
-          Calories Counter</Link>
-          </p> 
-          <p className="mainIcon" > <Link to="/recipe">
+         <i className="fa fa-calculator" aria-hidden="true"></i> Calorie Calculator</Link>
+          </button> 
+          <button className="mainIcon" > <Link to="/recipe">
           <i className="fa fa-cutlery" aria-hidden="true"></i>
           
           Recipe</Link> 
-          </p>
+          </button>
         </div>
        
       </div>

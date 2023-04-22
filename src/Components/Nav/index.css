@@ -1,8 +1,8 @@
 .navBtn{    
     border: 1px solid #b8bfc2;
     box-shadow: 1px 0px 6px white;
+    color: white;
     border-radius: 5px;
-    color: #fff;;
     cursor: pointer;
     font-size: 1.2rem;
     font-weight: 600;
@@ -37,5 +37,4 @@
   }
 .navBtn:hover{
     background-color: #fff;
-    color: #000;
 }

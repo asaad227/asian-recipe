@@ -56,7 +56,7 @@ export default function CaloreCounter() {
 
    <Nav/>
     <div className='caloriesCounter'>
-        <h1>Calorie Counter</h1>
+        <h1>Calorie Calculator</h1>
         <h3>Search for food Calories</h3>
         <p>Enter your ingredient name and hit search to find calories of that ingredient in 100g</p>
         <input type="text" placeholder='Enter your ingredient here...' value={nameIn} onChange={(e) => setNameIn(e.target.value)} />
