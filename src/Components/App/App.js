@@ -67,11 +67,11 @@ function App() {
      return (data.map((e, index)=> <section className='flex-box' key={index}>
      
        <h4 className='label'>{e.recipe.label}</h4>
-       <button key={index} onClick={() => fav(index)} className="reBtn"> <i class="fa fa-heart iconNav" aria-hidden="true"></i></button>
        
-       <div>
+       <div className='favImg'>
       <img src={e.recipe.image} className='recipe-pic' alt={e.recipe.label}/>
       <p className='caloriesApi'>Calories: {e.recipe.calories.toFixed(0)} kcals</p>
+      <button key={index} onClick={() => fav(index)} className="reBtn"> <i class="fa fa-heart iconNav" aria-hidden="true"></i></button>
       </div>
     <button className='ingredientBtn' onClick={()=> display(index)}>{show[index]? "Hide Ingredients":"Show Ingredients"}</button>
      <p >{show[index]? e.recipe.ingredients.map((x,i)=>{

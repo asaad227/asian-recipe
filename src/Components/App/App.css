@@ -130,9 +130,11 @@ padding-left: 40px;
 .reBtn{
 justify-content: center;
   margin: 5px 5px;
-  border-radius: 5px;
+  background-color: #a2ebff;
+border: none;
+  /* border-radius: 5px;
   border: 1px solid #b8bfc2;
-  box-shadow: 1px 0px 6px #fefae0;
+  box-shadow: 1px 0px 6px #fefae0; */
 }
 
 .fa-heart{

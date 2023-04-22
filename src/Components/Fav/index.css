@@ -6,6 +6,10 @@
     display: none;
 }
 
+.favImg{
+  display: inline;
+}
+
 .recipe-fav{
     width: 80vw;
     height: 75vh;
