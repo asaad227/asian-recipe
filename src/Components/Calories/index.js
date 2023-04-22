@@ -4,6 +4,7 @@ import foods from "../../lib/data"
 export default function CaloreCounter() {
     const [nameIn, setNameIn] = useState("");
     const [calories, ] = useState([...foods]);
+    const[total, setTotal] = useState(0);
  
     const [data, setData] = useState(() => {
         const storedList = localStorage.getItem("myCalories");
@@ -20,7 +21,7 @@ export default function CaloreCounter() {
         const result = list.filter((e) => e.name.toLowerCase().includes(nameIn.toLowerCase()));
         console.log(result);
         const caloriesData = {
-            name:nameIn,
+            name:result[0].name,
             calories:result[0].calories 
 
         };
@@ -32,22 +33,55 @@ export default function CaloreCounter() {
      
         localStorage.setItem("myCalories", JSON.stringify(item));
         setData(item);
+        setNameIn("");
+       
      
     }
 
+    useEffect(() => {   
+        const totalCalories = data.reduce((acc, e) => acc + e.calories, 0);
+        setTotal(totalCalories);
+        }, [data]);
+
+        function deleteItem(index){
+            const list = [...data];
+            list.splice(index, 1);
+            localStorage.setItem("myCalories", JSON.stringify(list));
+            setData(list);
+        }
+
   return (
-    <div>
+    <div className='caloriesCounter'>
         <h1>Calorie Counter</h1>
-        <input type="text" value={nameIn} onChange={(e) => setNameIn(e.target.value)} />
-        <button onClick={handleCalories}>Search</button>
+        <h3>Search for food Calories</h3>
+        <p>Enter your ingredient name and hit search to find calories of that ingredient in 100g</p>
+        <input type="text" placeholder='Enter your ingredient here...' value={nameIn} onChange={(e) => setNameIn(e.target.value)} />
+        <button className='searchBtn' onClick={handleCalories}>Search</button>
         <div>
-            {data.map(((e,index)=>{
-                return(<div className='caloriesCounter' key={index}>
-                <h1>{e.name}</h1>
-                <p>{e.calories}</p>
-                </div>)
-            }))}
+        <table>
+        <thead>   
+    <tr>
+    <th>Food</th>
+    <th>Calories per 100g</th>
+    <th>Remove</th>
+    </tr>
+    </thead>
+    {data.map((e, index)=>
+    <tbody key={index}>
+  
+      <tr>
+
+    <td>{data[index]?e.name:""}</td>
+    <td>{data[index]?e.calories:""}</td>
+    <td className='removeBtn' onClick={()=>deleteItem(index)}>X</td>
+    </tr>
+    
+    </tbody>
+    )}
+  </table>
         </div>
+        <h4>Total Calories:  {total} kcals</h4>
+       
             </div>
   )
 }

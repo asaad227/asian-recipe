@@ -1,4 +1,116 @@
 .caloriesCounter{
-    color: #fff;
-    background-color: #000;
+    display: flex;
+    width: 45vw;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px auto;
+    text-align: center;
+    color: #0c0c0c;
+    border-radius: 1rem;
+    border: 1px solid #b8bfc2;
+  box-shadow: 1px 0px 6px white;
+   
 }
+
+.caloriesCounter h4{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 800;
+    line-height: 1.75;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    letter-spacing: 0.02857em;
+    /* text-transform: uppercase;  */
+}
+
+
+
+.caloriesCounter input{
+    width: 40vw;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    border: 1px solid #181515;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 800;
+    text-align: center;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    
+}
+
+.searchBtn{
+    width: 40vw;
+    margin: 0.5rem auto;
+    padding: 0.5rem;
+    border: 1px solid #181515;
+    border-radius: 5px;
+    font-size: 0.875rem;
+    font-weight: 800;
+    text-align: center;
+    background-color: #f2e8e8;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+    color: black;
+}
+
+table{
+    border: 1px solid #181515;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    width: 40vw;
+}
+
+td{
+    border: 1px solid #181515;
+    padding: 0.5rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+th{
+    border: 1px solid #181515;
+    padding: 0.5rem;
+    line-height: 1.75;
+    letter-spacing: 0.02857em;
+    text-transform: uppercase;
+    font-family: "Roboto","Helvetica","Arial",sans-serif;
+}
+
+.removeBtn{
+    background-color: #f2e8e8;
+    color: #0c0c0c;
+    border: 1px solid #181515;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    width: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .caloriesCounter{
+        width: 85vw;
+    }
+    .caloriesCounter input{
+        width: 80vw;
+    }
+    .searchBtn{
+        width: 80vw;
+    }
+    table{
+        width: 80vw;
+    }
+    
+}
+    
