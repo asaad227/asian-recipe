@@ -51,6 +51,13 @@ export default function CaloreCounter() {
             setData(list);
         }
 
+        function checkData(){
+          if(data.length === 0){
+            return <h4>Search for food to see calories</h4>
+          }else{
+            return <h4>Total Calories:  {total} kcals</h4>
+          }
+        }
   return (
     <div>
       <Nav/>
@@ -86,8 +93,9 @@ export default function CaloreCounter() {
     )}
   </table>
         </div>
-        <h4>Total Calories:  {total} kcals</h4>
-       
+        <div className='caloriesTotal'>
+        {checkData()}
+        </div>
             </div>
             </div>
             </div>

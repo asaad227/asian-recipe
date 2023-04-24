@@ -118,6 +118,21 @@ th{
     width: 50px;
 }
 
+
+.caloriesTotal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid white;
+    box-shadow: 1px 0px 6px #b8bfc2; */
+    width: 90vw;
+    height: 20vh;
+    margin: 10px auto;
+  
+  }
+
 @media screen and (max-width: 768px) {
     .caloriesCounter{
         width: 85vw;
