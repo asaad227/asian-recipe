@@ -8,6 +8,7 @@ import Profile from '../Profile';
 import CaloreCounter from '../Calories';
 import SocialLink from '../Social-links';
 
+
 export default function Main() {
   return (
     <div>
@@ -17,7 +18,10 @@ export default function Main() {
       <Route path="fav" element={<Fav />} />
       <Route path="*" element={<h1>404 Not Found</h1>} />
       <Route path='calories' element={<CaloreCounter />} />
+
+   
     </Routes>
+    
     <SocialLink/>
     </div>
   )

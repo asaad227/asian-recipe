@@ -10,6 +10,7 @@ const Profile = () => {
      (
       <div className="profile">
        <h1 className="profileName">Welcome To My Recipe Book</h1>
+
        <Link to="/recipe">
         <img className="profilePic" src={HomePic} alt="Recipe Home" />
         </Link>
@@ -26,6 +27,11 @@ const Profile = () => {
           <i className="fa fa-cutlery" aria-hidden="true"></i>
           
           Recipe</Link> 
+          </button>
+          <button className="mainIcon" > 
+          <a href="https://todo-reminder-two.vercel.app/">
+          <i className='fa fa-home' aria-hidden="true"></i>
+         </a>
           </button>
         </div>
        

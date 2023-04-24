@@ -18,6 +18,11 @@ export default function Nav() {
           <button className='navBtn'><Link to="/calories">
           <i className="fa fa-calculator" aria-hidden="true"></i>
           </Link></button>
+          <button className='navBtn'>
+          <a href="https://todo-reminder-two.vercel.app/">
+          <i className='fa fa-home' aria-hidden="true"></i>
+         </a>
+          </button>
     </div>
   )
 }
