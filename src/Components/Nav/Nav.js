@@ -1,7 +1,7 @@
 import React from 'react';
 import "./index.css";
 import {Link} from 'react-router-dom';
-import { RiHomeSmileLine } from "react-icons/ri";
+// import { RiHomeSmileLine } from "react-icons/ri";
 import {  MdOutlineFoodBank  } from "react-icons/md";
 export default function Nav() {
   return (

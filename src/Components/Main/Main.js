@@ -4,7 +4,7 @@ import Fav from '../Fav/Fav';
 import App from '../App/App';
 import { Route } from 'react-router-dom';
 import "./index.css"
-import Profile from '../Profile';
+// import Profile from '../Profile';
 import CaloreCounter from '../Calories';
 import SocialLink from '../Social-links';
 
