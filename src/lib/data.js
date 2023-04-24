@@ -1,7 +1,7 @@
 const foods = [{
     "id": 1,            // unique id of the food
     "name": "Chicken",  // name of the food
-    "calories": 200,    // calories per 100g
+    "calories": 235,    // calories per 100g
     "unit": "g",        // unit of measurement
     "quantity": 100     // quantity of food
 }, {  

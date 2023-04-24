@@ -25,6 +25,19 @@
   letter-spacing: 0.02857em;
 }
 
+.flex-fetch{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid white;
+  box-shadow: 1px 0px 6px #b8bfc2;
+  width: 90vw;
+  height: 65vh;
+  margin: 10px auto;
+}
+
 
 
 .ingredientPara{
