@@ -16,8 +16,9 @@
     text-align: center;
     align-items: center;
     margin-top: 2rem;
-    width: 80vw;
-    height: 80vh;
+    margin-left: 1rem;
+    width: 90vw;
+    height: 88vh;
     border: 1px solid #b8bfc2;
     box-shadow: 1px 0px 6px white;
     /* background-color: #84c4d4;
