@@ -13,7 +13,7 @@ export default function Main() {
   return (
     <div>
       <Routes>
-      <Route path="/" element={<Profile />}/>
+      {/* <Route path="/" element={<Profile />}/> */}
       <Route path="recipe" element={<App />}/>
       <Route path="fav" element={<Fav />} />
       <Route path="*" element={<h1>404 Not Found</h1>} />
