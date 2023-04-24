@@ -4,12 +4,13 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
 import Main from './Components/Main/Main';
+// import GetApi from './Components/SampleApi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <React.StrictMode>
-    <Main />
+    < Main/>
   </React.StrictMode>
   </BrowserRouter>
 );
