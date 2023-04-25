@@ -28,11 +28,7 @@ const Profile = () => {
           
           Recipe</Link> 
           </button>
-          <button className="mainIcon" > 
-          <a href="https://todo-reminder-two.vercel.app/">
-          <i className='fa fa-home' aria-hidden="true"></i>
-         </a>
-          </button>
+       
         </div>
        
       </div>

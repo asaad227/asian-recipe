@@ -61,7 +61,7 @@ function App() {
   function checklist(){
     if(data.length === 0){
       return(<div className='flex-fetch'>
-        <p>Please fetch the data</p>
+        <h4>Chicken, Meat,fish or vegetarian recipes just type in the text box and choose your cuisine of your choice for your favourite recipe!!</h4>
       </div>)
     }else{
      return (data.map((e, index)=> 
