@@ -13,7 +13,7 @@ export default function Nav() {
           <button className='navBtn'><Link to="/fav">
           <i className="fa fa-heart" aria-hidden="true"></i>
           </Link></button>
-          <button className='navBtn'><Link to="/">
+          <button className='navBtn'><Link to="/recipe">
           <MdOutlineFoodBank className='iconNav' />
           </Link></button>
           <button className='navBtn'><Link to="/calories">
