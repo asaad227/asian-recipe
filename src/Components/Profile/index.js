@@ -15,14 +15,16 @@ const Profile = () => {
         <img className="profilePic" src={HomePic} alt="Recipe Home" />
         </Link>
         <div className="homeIcon">
+        <button className="mainIcon" > <Link to="/recipe">
+          <i className="fa fa-cutlery" aria-hidden="true"></i>
+          Recipe</Link> 
+          </button>
+          
         <button className="mainIcon"><Link to="/fav">
           <i className="fa fa-heart" aria-hidden="true"></i>
           Favourite Recipe</Link>
           </button> 
-          <button className="mainIcon" > <Link to="/recipe">
-          <i className="fa fa-cutlery" aria-hidden="true"></i>
-          Recipe</Link> 
-          </button>
+          
           <button className="mainIcon"><Link to="/calories">
         
          <i className="fa fa-calculator" aria-hidden="true"></i> Calorie Calculator</Link>
