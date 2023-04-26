@@ -19,15 +19,15 @@ const Profile = () => {
           <i className="fa fa-heart" aria-hidden="true"></i>
           Favourite Recipe</Link>
           </button> 
+          <button className="mainIcon" > <Link to="/recipe">
+          <i className="fa fa-cutlery" aria-hidden="true"></i>
+          Recipe</Link> 
+          </button>
           <button className="mainIcon"><Link to="/calories">
         
          <i className="fa fa-calculator" aria-hidden="true"></i> Calorie Calculator</Link>
           </button> 
-          <button className="mainIcon" > <Link to="/recipe">
-          <i className="fa fa-cutlery" aria-hidden="true"></i>
           
-          Recipe</Link> 
-          </button>
        
         </div>
        
